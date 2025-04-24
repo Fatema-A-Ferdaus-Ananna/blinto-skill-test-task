@@ -1,0 +1,1 @@
+# blinto-skill-test-task
