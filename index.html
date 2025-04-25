@@ -21,10 +21,10 @@
         </div>
         <div>
           <ul class="nav-menu nav-text">
-            <li>Features</li>
-            <li>Achievements</li>
-            <li>Testimonials</li>
-            <li>FAQ</li>
+            <li><a href="#feature">Features</a></li>
+            <li><a href="#achievement">Achievements</a></li>
+            <li><a href="#testimonial">Testimonials</a></li>
+            <li><a href="#faq">FAQ</a></li>
           </ul>
         </div>
         <div class="auth-section">
@@ -33,7 +33,31 @@
         </div>
 
         <div class="mobile-menu">
-          <img src="/assets/svg/Vector(8).svg" alt="" srcset="" />
+          <div id="mobile-menu-btn">
+            <img src="/assets/svg/Vector(8).svg" alt="" srcset="" />
+          </div>
+          <div class="mobile-menu-modal">
+            <div class="custom-center">
+              <span class="logo">
+                <img src="/assets/brandLogo/Logo.png" alt="" srcset="" />
+              </span>
+            </div>
+            <div class="mobile-nav-menu-container">
+              <ul class="mobile-nav-menu nav-text">
+                <li><a href="#feature">Features</a></li>
+                <li><a href="#achievement">Achievements</a></li>
+                <li><a href="#testimonial">Testimonials</a></li>
+                <li><a href="#faq">FAQ</a></li>
+              </ul>
+              <div class="mobile-auth-section">
+                <button class="nav-text button-round sign-up-btn">
+                  Sign Up
+                </button>
+                <button class="cta-btn nav-text button-round">Log In</button>
+              </div>
+            </div>
+            <button id="modal-close-btn">×</button>
+          </div>
         </div>
       </nav>
     </div>
@@ -41,59 +65,61 @@
 
     <!-- hero section start -->
     <main class="main">
-      <section class="hero container" id="hero">
-        <div class="hero-text-container">
-          <div class="hero-text-section">
-            <span class="badge-text badge-bg button-round"
-              >Design System For Gen Z</span
-            >
-            <h1 class="hero-main-text">
-              Unleash Your Inner Design Sloth Today.
-            </h1>
-            <h2 class="hero-sub-text">
-              Suspendisse faucibus interdum posuere lorem ipsum dolor sit amet.
-              Cras fermentum odio eu feugiat pretium nibh ipsum. Venenatis cras
-              sed felis eget velit aliquet.
-            </h2>
-          </div>
-          <div class="hero-cta">
-            <button class="hero-cta-btn">
-              <img
-                style="width: 30px; height: 40px"
-                src="/assets/svg/Apple logo.svg"
-                alt=""
-                srcset=""
-              />
-              <span style="text-align: start"
-                ><p>Download on the</p>
-                <p class="hero-cta-btn-text">App Store</p></span
+      <div class="container">
+        <section class="hero" id="hero">
+          <div class="hero-text-container">
+            <div class="hero-text-section">
+              <span class="badge-text badge-bg button-round"
+                >Design System For Gen Z</span
               >
-            </button>
-            <button class="hero-cta-btn">
-              <img
-                style="width: 30px; height: 40px"
-                src="/assets/svg/Google Play logo.svg"
-                alt=""
-                srcset=""
-              />
-              <span style="text-align: start"
-                ><p>GET IT ON</p>
-                <p class="hero-cta-btn-text">Google Play</p></span
-              >
-            </button>
+              <h1 class="hero-main-text">
+                Unleash Your Inner Design Sloth Today.
+              </h1>
+              <h2 class="hero-sub-text">
+                Suspendisse faucibus interdum posuere lorem ipsum dolor sit
+                amet. Cras fermentum odio eu feugiat pretium nibh ipsum.
+                Venenatis cras sed felis eget velit aliquet.
+              </h2>
+            </div>
+            <div class="hero-cta">
+              <button class="hero-cta-btn">
+                <img
+                  style="width: 30px; height: 40px"
+                  src="/assets/svg/Apple logo.svg"
+                  alt=""
+                  srcset=""
+                />
+                <span style="text-align: start"
+                  ><p>Download on the</p>
+                  <p class="hero-cta-btn-text">App Store</p></span
+                >
+              </button>
+              <button class="hero-cta-btn">
+                <img
+                  style="width: 30px; height: 40px"
+                  src="/assets/svg/Google Play logo.svg"
+                  alt=""
+                  srcset=""
+                />
+                <span style="text-align: start"
+                  ><p>GET IT ON</p>
+                  <p class="hero-cta-btn-text">Google Play</p></span
+                >
+              </button>
+            </div>
           </div>
-        </div>
 
-        <div class="hero-photo">
-          <picture>
-            <source
-              srcset="/assets/images/Group.png"
-              media="(max-width: 767px)"
-            />
-            <img src="/assets/images/Frame(2).png" alt="Hero Image" />
-          </picture>
-        </div>
-      </section>
+          <div class="hero-photo">
+            <picture>
+              <source
+                srcset="/assets/images/Group.png"
+                media="(max-width: 767px)"
+              />
+              <img src="/assets/images/Frame(2).png" alt="Hero Image" />
+            </picture>
+          </div>
+        </section>
+      </div>
     </main>
     <!-- hero section end -->
 
@@ -108,7 +134,7 @@
     <!-- social proof section end -->
 
     <!-- primary features section start -->
-    <section class="container">
+    <section id="feature" class="container">
       <div class="primary-features-section custom-center">
         <div class="section-header custom-gap-24-20 custom-center">
           <span class="badge-text badge-bg button-round"
@@ -128,7 +154,7 @@
     <!-- primary features section end -->
 
     <!-- statistic section start-->
-    <section class="color-section">
+    <section id="achievement" class="color-section custom-center">
       <div class="container">
         <div class="statistic-section custom-center">
           <div class="section-header statistic-header-gap custom-center">
@@ -234,13 +260,13 @@
     <!-- features section end  -->
 
     <!-- testimonial section start-->
-    <section class="color-section">
+    <section id="testimonial" class="color-section">
       <div class="container">
         <div class="testimonial-section custom-center">
           <div class="section-header custom-gap-24-20 custom-center">
             <span class="badge-bg badge-text button-round">Testimonials</span>
             <h1 class="section-title">What People Say</h1>
-            <h2 style="text-align: center" class="paragraph-lg">
+            <h2 style="text-align: center" class="section-subtitl-lg-md">
               You can visit our office anytime but please don’t stalk us or
               don’t be creepy.
             </h2>
@@ -264,8 +290,10 @@
       <div class="contact-section custom-start">
         <div class="section-header custom-gap-24-24 custom-start">
           <span class="badge-text badge-bg button-round">Visit Us Anytime</span>
-          <h1 style="text-align: start" class="section-title">Our Office</h1>
-          <h2 style="text-align: start" class="section-subtitle">
+          <h1 style="text-align: start" class="head-md-extrabold">
+            Our Office
+          </h1>
+          <h2 style="text-align: start" class="paragraph-lg">
             You can visit our office anytime but please don’t stalk us or don’t
             be creepy.
           </h2>
@@ -277,13 +305,13 @@
     <!-- contact secttion end -->
 
     <!-- FAQ section start -->
-    <section style="background: #f8fafcf8" class="color-section">
+    <section id="faq" style="background: #f8fafcf8" class="custom-center">
       <div class="container">
         <div class="faq-section custom-center">
           <div class="section-header custom-gap-24-20 custom-center">
             <span class="badge-bg badge-text button-round">FAQ</span>
             <h1 class="section-title">Frequently Asked Questions</h1>
-            <h2 style="text-align: center" class="paragraph-lg">
+            <h2 style="text-align: center" class="section-subtitl-lg-md">
               Fermentum iaculis eu non diam phasellus vestibulum. Volutpat
               commodo sed egestas egestas fringilla phasellus. Donec ac odio
               tempor orci dapibus ultrices.
@@ -299,22 +327,107 @@
     <!-- CTA section start -->
     <section style="background-color: var(--brand-5)">
       <div class="cta-section custom-center">
-        <div class="section-header custom-gap-24-20 custom-center">
-          <span class="badge-bg badge-text button-round">FAQ</span>
-          <h1 class="section-title">Frequently Asked Questions</h1>
-          <h2 style="text-align: center" class="paragraph-lg">
-            Fermentum iaculis eu non diam phasellus vestibulum. Volutpat commodo
-            sed egestas egestas fringilla phasellus. Donec ac odio tempor orci
-            dapibus ultrices.
-          </h2>
-        </div>
+        <div class="cta-btn-container">
+          <div class="section-header custom-gap-24-24 custom-start">
+            <h1 style="text-align: start" class="section-title">
+              Let’s Download The App.
+            </h1>
+            <h2 class="section-subtitl-lg-md">
+              Velit scelerisque in dictum non consectetur. Felis eget velit
+              aliquet sagittis. Ultricies integer quis auctor elit sed vulputate
+              mi. Massa id neque aliquam vestibulum morbi blandit cursus.
+            </h2>
+          </div>
 
+          <div class="cta-btn-section">
+            <button class="button-round learn-more-btn text-md-bold">
+              Learn More
+            </button>
+            <button
+              style="color: white"
+              class="button-round cta-btn text-md-bold"
+            >
+              Get Started
+            </button>
+          </div>
+        </div>
         <div class="cta-photo">
           <img src="/assets/images/Frame(3).png" alt="cta-photo" srcset="" />
         </div>
       </div>
     </section>
     <!-- CTA  section end -->
+
+    <!-- footer start -->
+    <section class="color-section">
+      <div class="container">
+        <div class="footer-section">
+          <div class="footer-link-container">
+            <div class="footer-link-section">
+              <h2 class="footer-title">Site Map</h2>
+              <ul
+                class="footer-link-list footer-list-text"
+                id="siteMap-list"
+              ></ul>
+            </div>
+
+            <div class="footer-link-section">
+              <h2 class="footer-title">Services</h2>
+              <ul
+                class="footer-link-list footer-list-text"
+                id="services-list"
+              ></ul>
+            </div>
+
+            <div class="footer-link-section">
+              <h2 class="footer-title">Product</h2>
+              <ul
+                class="footer-link-list footer-list-text"
+                id="products-list"
+              ></ul>
+            </div>
+
+            <div class="footer-link-section">
+              <h2 class="footer-title">Help & Support</h2>
+              <ul
+                class="footer-link-list footer-list-text"
+                id="help-support-list"
+              ></ul>
+            </div>
+
+            <div class="footer-link-section">
+              <h2 class="footer-title">Legal</h2>
+              <ul
+                class="footer-link-list footer-list-text"
+                id="legal-list"
+              ></ul>
+            </div>
+
+            <div class="footer-link-section">
+              <h2 class="footer-title">Pricing</h2>
+              <ul
+                class="footer-link-list footer-list-text"
+                id="pricing-list"
+              ></ul>
+            </div>
+          </div>
+
+          <div class="footer-logo">
+            <span> <img src="/assets/brandLogo/Logo.png" alt="logo" /></span>
+            <span
+              ><button id="bottom-btn">
+                <img src="/assets/svg/Vector(13).svg" alt="" /></button
+            ></span>
+            <span>
+              <p class="copyright-text">
+                Copyright 2028 slothUI, All Rights Reserved.
+              </p></span
+            >
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- footer end -->
 
     <script type="module" src="/script/script.js"></script>
   </body>

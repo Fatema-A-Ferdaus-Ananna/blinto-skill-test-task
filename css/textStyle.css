@@ -4,7 +4,6 @@
   line-height: 22px;
   letter-spacing: -0.007em;
 }
-
 .badge-text {
   font-weight: 600;
   font-size: 14px;
@@ -44,7 +43,6 @@
   text-align: center;
   color: var(--gray-80);
 }
-
 .section-subtitle {
   font-weight: 400;
   font-size: 20px;
@@ -52,6 +50,14 @@
   letter-spacing: 0;
   text-align: center;
   color: var(--gray-60);
+}
+.section-subtitl-lg-md {
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 160%;
+  letter-spacing: 0%;
+  color: var(--gray-60);
+  text-align: center;
 }
 
 .cta-text {
@@ -69,7 +75,6 @@
   text-align: center;
   color: var(--gray-80);
 }
-
 .feature-card-description {
   font-weight: 400;
   font-size: 16px;
@@ -87,7 +92,6 @@
   text-align: center;
   color: var(--primary-color);
 }
-
 .statistic-text-sub {
   font-weight: 700;
   font-size: 18px;
@@ -104,7 +108,6 @@
   letter-spacing: -1%;
   color: var(--gray-60);
 }
-
 .who-is-it-for-detail {
   font-weight: 400;
   font-size: 16px;
@@ -120,7 +123,6 @@
   letter-spacing: -0.7%;
   color: var(--gray-80);
 }
-
 .commenter-info-text {
   font-weight: 400;
   font-size: 16px;
@@ -128,7 +130,6 @@
   letter-spacing: 0%;
   color: var(--gray-60);
 }
-
 .contact-info-title-text {
   font-weight: 800;
   font-size: 20px;
@@ -149,16 +150,32 @@
   font-size: 16px;
   line-height: 22px;
   letter-spacing: -0.007em;
+  color: var(--gray-80);
 }
-
-.footer-list {
+.footer-list-text {
   font-weight: 500;
   font-size: 16px;
   line-height: 22px;
-  letter-spacing: -0.007em;
+  letter-spacing: -0.7%;
+
+  color: var(--gray-60);
+}
+.copyright-text {
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 20px;
+  letter-spacing: -0.6%;
+  color: var(--gray-40);
 }
 
 /* common */
+.head-md-extrabold {
+  font-weight: 800;
+  font-size: 36px;
+  line-height: 44px;
+  letter-spacing: -1.4%;
+  color: var(--gray-80);
+}
 .paragraph-lg {
   font-weight: 400;
   font-size: 18px;
@@ -187,7 +204,6 @@
   letter-spacing: -0.7%;
   color: var(--gray-70);
 }
-
 .text-md-bold {
   font-weight: 700;
   font-size: 16px;
@@ -195,7 +211,6 @@
   letter-spacing: -0.7%;
   color: var(--gray-80);
 }
-
 .text-sm-bold {
   font-weight: 700;
   font-size: 14px;
@@ -225,6 +240,9 @@
   }
   .section-subtitle {
     font-size: 18px;
+  }
+  .section-subtitl-lg-md {
+    font-size: 16px;
   }
 
   .profile-name-text {
@@ -274,6 +292,9 @@
   }
   .section-subtitle {
     font-size: 18px;
+  }
+  .section-subtitl-lg-md {
+    font-size: 16px;
   }
 
   .profile-name-text {

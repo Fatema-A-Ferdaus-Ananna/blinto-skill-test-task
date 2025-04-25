@@ -124,12 +124,12 @@
   display: flex;
   gap: 24px;
   align-items: flex-center;
+  transition: all 3s ease;
 }
 
 .bar {
   width: 4px;
   min-height: 100%;
-  background: var(--primary-color);
   border-radius: 20px;
 }
 
@@ -271,6 +271,5 @@
   .who-is-it-for > * {
     width: 100%; /* Full width on mobile */
   }
-
   /* who is it for end */
 }
