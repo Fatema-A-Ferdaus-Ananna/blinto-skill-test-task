@@ -11,6 +11,7 @@
   letter-spacing: -0.006em;
   text-align: center;
   color: var(--primary-color);
+  white-space: nowrap;
 }
 
 .hero-main-text {
