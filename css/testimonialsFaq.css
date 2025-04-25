@@ -1,0 +1,217 @@
+/* testimonial start */
+.testimonial-section {
+  padding: 96px 0px;
+  display: flex;
+  flex-direction: column;
+  gap: 64px;
+}
+#testimonial-list {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 32px;
+}
+.testimonial-card-container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+.testimonial-card {
+  padding: 24px;
+  height: fit-content;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 24px;
+  border: 1px solid var(--gray-20);
+  border-radius: 24px;
+}
+.testimonial-rating {
+  display: flex;
+  font-size: 30px;
+  align-items: center;
+  justify-content: left;
+}
+.testimonial-profile {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 12px;
+}
+.profile-img {
+  width: 48px;
+  height: 48px;
+  overflow: hidden;
+  border-radius: 50px;
+}
+.profile-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.testimonial-profile-detail {
+  display: flex;
+  flex-grow: 1;
+  flex-direction: column;
+}
+#more-testimonial-btn {
+  display: none;
+}
+/* testimonial end */
+
+/* contact start */
+.contact-section {
+  padding: 96px 0px;
+  display: flex;
+  flex-direction: column;
+  gap: 64px;
+}
+#contact-list {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 32px;
+}
+.contact-info-item {
+  padding: 24px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 24px;
+  border: 1px solid var(--gray-20);
+  border-radius: 24px;
+}
+.location {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+/* contact end */
+
+/* faq start */
+.faq-section {
+  padding: 96px 0px;
+  max-width: 800px;
+  display: flex;
+  flex-direction: column;
+  gap: 48px;
+}
+#faq-list {
+  width: 100%;
+}
+.faq-card {
+  padding: 16px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: start;
+  gap: 16px;
+  border-bottom: 1px solid var(--gray-30);
+}
+.question-container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 16px;
+}
+.question {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+/* faq end */
+/* responsive */
+@media (min-width: 768px) and (max-width: 1024px) {
+  /* testimonial start */
+  .testimonial-section {
+    padding: 64px 0;
+    gap: 32px;
+  }
+  #testimonial-list {
+    grid-template-columns: 1fr;
+    gap: 10px;
+  }
+  .testimonial-card-container {
+    gap: 10px;
+  }
+  .profile-img {
+    width: 40px;
+    height: 40px;
+  }
+
+  #more-testimonial-btn {
+    width: 100%;
+    display: block;
+  }
+  /* testimonial end */
+
+  /* contact start */
+  .contact-section {
+    gap: 50px;
+  }
+  #contact-list {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+  }
+  .location {
+    gap: 6px;
+  }
+  /* contact end */
+
+  /* faq start */
+  .faq-section {
+    padding: 64px 0px;
+    gap: 40px;
+  }
+  .question-container {
+    gap: 12px;
+  }
+  /* faq end */
+}
+
+@media (max-width: 767px) {
+  /* testimonial start */
+  .testimonial-section {
+    padding: 64px 0;
+    gap: 32px;
+  }
+  #testimonial-list {
+    grid-template-columns: 1fr;
+    gap: 10px;
+  }
+  .testimonial-card-container {
+    gap: 10px;
+  }
+  .profile-img {
+    width: 40px;
+    height: 40px;
+  }
+  #more-testimonial-btn {
+    width: 100%;
+    display: block;
+  }
+  /* testimonial end */
+
+  /* contact start */
+  .contact-section {
+    gap: 50px;
+  }
+  #contact-list {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+  .location {
+    gap: 6px;
+  }
+  /* contact end */
+
+  /* faq start */
+  .faq-section {
+    padding: 64px 0px;
+    gap: 40px;
+  }
+  /* faq end */
+}
