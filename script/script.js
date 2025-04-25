@@ -1,9 +1,10 @@
 import { companyPhotos } from "../data/companyPhoto.js";
+import { faqList } from "../data/FAQs.js";
 import { primaryFeatures } from "../data/features.js";
 import { officeLocations } from "../data/officeLocation.js";
 import { testimonialList } from "../data/testimonial.js";
 
-console.log(officeLocations);
+console.log(faqList);
 
 // social proof
 const socialProof = document.getElementById("social-proof");
@@ -50,7 +51,6 @@ testimonialList.forEach((testimonial, index) => {
   columns[colIndex].push(testimonial);
 });
 const testimonialContainer = document.getElementById("testimonial-list");
-console.log(columns);
 
 columns.forEach((colData) => {
   const col = document.createElement("div");
@@ -101,4 +101,42 @@ officeLocations.forEach((location) => {
       </div>`;
 
   officeList.appendChild(contactInfoCard);
+});
+
+// faq
+const faqListContainer = document.getElementById("faq-list");
+
+faqList.forEach((faq) => {
+  const faqCard = document.createElement("div");
+  faqCard.className = "faq-card";
+
+  faqCard.innerHTML = `
+    <div class="question-container">
+      <span class="question">
+        <img
+          src="/assets/svg/Vector(12).svg"
+          alt="question"
+          srcset=""
+        />
+        <h1 class="text-md-extrebold">${faq.question}</h1>
+      </span>
+      <button class="toggle-btn">
+      <img src="/assets/svg/Vector(13).svg" alt="arrow" />
+      </button>
+    </div>
+     <p class="paragraph-sm answer-visible">${faq.answer}</p>
+  `;
+
+  faqListContainer.appendChild(faqCard);
+
+  // hide-show faq answer
+  const toggleBtn = faqCard.querySelector(".toggle-btn");
+  const answerPara = faqCard.querySelector(".answer-visible");
+  const alignStart = faqCard.querySelector(".question-container");
+
+  toggleBtn.addEventListener("click", () => {
+    answerPara.classList.toggle("show");
+    alignStart.classList.toggle("align-start");
+    toggleBtn.classList.toggle("rotate");
+  });
 });
