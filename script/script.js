@@ -135,7 +135,7 @@ officeLocations.forEach((location) => {
   contactInfoCard.className = "contact-info-item";
 
   contactInfoCard.innerHTML = ` 
-      <span><img src="./assets/svg/Vector(7).svg" alt="" /></span>
+      <span><img src="assets/svg/Vector(7).svg" alt="" /></span>
       <div class="location">
         <h2 class="contact-info-title-text">${location.conutry}</h2>
         <span class="contact-info-sub-text">
@@ -158,14 +158,14 @@ faqList.forEach((faq) => {
     <div class="question-container">
       <span class="question">
         <img
-          src="./assets/svg/Vector(12).svg"
+          src="assets/svg/Vector(12).svg"
           alt="question"
           srcset=""
         />
         <h1 class="text-md-extrebold">${faq.question}</h1>
       </span>
       <button class="toggle-btn">
-      <img src="./assets/svg/Vector(13).svg" alt="arrow" />
+      <img src="assets/svg/Vector(13).svg" alt="arrow" />
       </button>
     </div>
      <p class="paragraph-sm answer-visible">${faq.answer}</p>
