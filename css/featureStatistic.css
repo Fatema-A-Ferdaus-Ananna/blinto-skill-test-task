@@ -89,6 +89,27 @@
 /* statistic end */
 
 /* who is it for start */
+@keyframes animate-left-to-right {
+  from {
+    opacity: 0;
+    transform: translateX(-50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+@keyframes animate-right-to-left {
+  from {
+    opacity: 0;
+    transform: translateX(100px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
 .features-section {
   padding: 96px 0px;
   display: flex;
@@ -106,31 +127,62 @@
   justify-content: space-between;
   align-items: center;
   gap: 32px;
+  align-items: stretch;
 }
 .who-is-it-for > * {
   width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.who-is-it-for-photo {
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  opacity: 0;
+  border-radius: 28px;
+  overflow: hidden;
+}
+.who-is-it-for-photo.active {
+  scale: 1;
+}
+.who-is-it-for-photo.in-view {
+  animation: animate-right-to-left 1s ease-out 0.8s forwards;
 }
 .who-is-it-for-photo img {
   width: 100%;
   height: 100%;
   object-fit: cover;
 }
+
 .who-is-it-for-list {
   display: flex;
   flex-direction: column;
   gap: 8px;
+  opacity: 0;
+}
+.who-is-it-for-list.in-view {
+  animation: animate-left-to-right 1s ease-out 0.8s forwards;
 }
 .who-is-it-for-card {
   display: flex;
   gap: 24px;
   align-items: flex-center;
-  transition: all 3s ease;
+  transition: all 1s ease-out;
+  cursor: pointer;
 }
-
+.who-is-it-for-card:hover {
+  background: var(--gray-10);
+}
 .bar {
   width: 4px;
   min-height: 100%;
   border-radius: 20px;
+  background-color: var(--brand-5);
+}
+.who-is-it-for-card.active .bar {
+  background-color: var(--primary-color);
 }
 
 .who-is-it-for-content {

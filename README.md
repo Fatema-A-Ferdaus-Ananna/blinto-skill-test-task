@@ -1,7 +1,11 @@
 # blinto-skill-test-task
 
+#Update - > Added infinite scrolling animation for company logos & Text animation added.
+
 ### Additional Featurs
-#### Added Mobile Navbar with Button: 
+
+#### Added Mobile Navbar with Button:
+
 Added a responsive, collapsible mobile navigation menu triggered by the menu button.
 
 ![1](https://github.com/user-attachments/assets/fb886683-3b68-45ae-b4f9-df315e01fb60)

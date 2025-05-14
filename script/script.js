@@ -5,22 +5,38 @@ import { footerData } from "../data/footerData.js";
 import { officeLocations } from "../data/officeLocation.js";
 import { emptyStar, fullStar, halfStar } from "../data/star.js";
 import { testimonialList } from "../data/testimonial.js";
+import { whoIsItFor } from "../data/whoIsItFor.js";
+
+// Screen size
+const isMobile = window.innerWidth < 767;
 
 // social proof
-const socialProof = document.getElementById("social-proof");
+const socialProof1 = document.getElementById("social-proof-1");
+const socialProof2 = document.getElementById("social-proof-2");
 
-companyPhotos.forEach((src) => {
-  const div = document.createElement("div");
-  div.className = "item";
+const halfway = Math.ceil(companyPhotos.length / 2);
+const firstHalf = companyPhotos.slice(0, halfway);
+const secondHalf = companyPhotos.slice(halfway);
 
-  const img = document.createElement("img");
-  img.src = src;
-  img.alt = "Company Logo";
-  img.className = "company-logo";
+function appendLogos(container, photos, direction) {
+  photos.forEach((src, index) => {
+    const div = document.createElement("div");
+    div.classList.add(`item${direction}`, `item${index + 1}`);
 
-  div.appendChild(img);
-  socialProof.appendChild(div);
-});
+    console.log(`item${direction}`, `item${index + 1}`);
+
+    const img = document.createElement("img");
+    img.src = src;
+    img.alt = `Company Logo ${index + 1}`;
+    img.className = "company-logo";
+
+    div.appendChild(img);
+    container.appendChild(div);
+  });
+}
+
+appendLogos(socialProof1, firstHalf, "Left");
+appendLogos(socialProof2, secondHalf, "Right");
 
 // primary feature
 const featuresList = document.getElementById("features-list");
@@ -47,7 +63,7 @@ const testimonialContainer = document.getElementById("testimonial-list");
 const loadMoreBtn = document.getElementById("more-testimonial-btn");
 
 const colCount = 3; // 3 columns layout on desktop
-const isMobile = window.innerWidth < 768;
+
 let visibleCount = isMobile ? 4 : testimonialList.length; //mobile show 4 cards intialy
 
 function renderTestimonials(limit) {
@@ -217,31 +233,6 @@ document.getElementById("bottom-btn").addEventListener("click", function () {
   });
 });
 
-// cards into view
-const observer = new IntersectionObserver(
-  (entries, observer) => {
-    entries.forEach((entry) => {
-      const card = entry.target;
-      const bar = card.querySelector(".bar");
-
-      document.querySelectorAll(".who-is-it-for-card .bar").forEach((bar) => {
-        bar.style.backgroundColor = "#e0e7ff";
-      });
-
-      if (entry.isIntersecting) {
-        bar.style.backgroundColor = "#4f46e5"; // change the bar color
-      }
-    });
-  },
-  {
-    threshold: 0.55,
-  }
-);
-//  each card
-document.querySelectorAll(".who-is-it-for-card").forEach((card) => {
-  observer.observe(card);
-});
-
 // mobile nav modal
 const menuBtn = document.getElementById("mobile-menu-btn");
 const modal = document.querySelector(".mobile-menu-modal");
@@ -262,3 +253,45 @@ navLinks.forEach((link) => {
     modal.classList.remove("active");
   });
 });
+
+const cardList = document.getElementById("who-is-it-for-list");
+let activeIndex = 0;
+const selectedThumbnail = document.getElementById("selected-thumbnail");
+
+function renderCardList() {
+  whoIsItFor.forEach((item, index) => {
+    const card = document.createElement("div");
+    card.classList.add("who-is-it-for-card");
+    card.onclick = () => handleCardClick(index);
+
+    card.innerHTML = `
+      <span class="bar"></span>
+      <div class="who-is-it-for-content">
+        <h2 class="who-is-it-for-title">${item.title}</h2>
+        <p class="who-is-it-for-detail">${item.description}</p>
+      </div>
+    `;
+
+    cardList.appendChild(card);
+  });
+
+  handleCardClick(activeIndex);
+}
+
+function handleCardClick(index) {
+  activeIndex = index;
+  const thumbnail = whoIsItFor[index].thumnail;
+
+  selectedThumbnail.src = thumbnail;
+
+  const cards = document.querySelectorAll(".who-is-it-for-card");
+  cards.forEach((card, i) => {
+    if (i === index) {
+      card.classList.add("active");
+    } else {
+      card.classList.remove("active");
+    }
+  });
+}
+
+renderCardList();

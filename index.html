@@ -69,20 +69,20 @@
         <section class="hero" id="hero">
           <div class="hero-text-container">
             <div class="hero-text-section">
-              <span class="badge-text badge-bg button-round"
+              <span class="badge-text badge-bg button-round animate"
                 >Design System For Gen Z</span
               >
-              <h1 class="hero-main-text">
+              <h1 class="hero-main-text animate">
                 Unleash Your Inner Design Sloth Today.
               </h1>
-              <h2 class="hero-sub-text">
+              <h2 class="hero-sub-text animate">
                 Suspendisse faucibus interdum posuere lorem ipsum dolor sit
                 amet. Cras fermentum odio eu feugiat pretium nibh ipsum.
                 Venenatis cras sed felis eget velit aliquet.
               </h2>
             </div>
-            <div class="hero-cta">
-              <button class="hero-cta-btn">
+            <div class="hero-cta animate">
+              <button class="hero-cta-btn-left animate">
                 <img
                   style="width: 30px; height: 40px"
                   src="./assets/svg/Apple logo.svg"
@@ -94,7 +94,7 @@
                   <p class="hero-cta-btn-text">App Store</p></span
                 >
               </button>
-              <button class="hero-cta-btn">
+              <button class="hero-cta-btn animate">
                 <img
                   style="width: 30px; height: 40px"
                   src="./assets/svg/Google Play logo.svg"
@@ -127,7 +127,10 @@
     <section class="color-section">
       <div class="container">
         <div class="social-proof-section">
-          <div id="social-proof"></div>
+          <div class="wraper">
+            <div id="social-proof-1" class="scroll-wrapper"></div>
+            <div id="social-proof-2" class="scroll-wrapper"></div>
+          </div>
         </div>
       </div>
     </section>
@@ -137,18 +140,18 @@
     <section id="feature" class="container">
       <div class="primary-features-section custom-center">
         <div class="section-header custom-gap-24-20 custom-center">
-          <span class="badge-text badge-bg button-round"
+          <span class="badge-text badge-bg button-round animate"
             >Our Main Features</span
           >
-          <h1 class="section-title">Our Primary Features</h1>
-          <h2 class="section-subtitle">
+          <h1 class="section-title animate">Our Primary Features</h1>
+          <h2 class="section-subtitle animate">
             Volutpat commodo sed egestas egestas fringilla phasellus. Tincidunt
             eget nullam non nisi. Nisi porta lorem mollis aliquam ut porttitor
             leo.
           </h2>
         </div>
 
-        <div id="features-list"></div>
+        <div id="features-list" class="list animate"></div>
       </div>
     </section>
     <!-- primary features section end -->
@@ -161,29 +164,30 @@
             <span class="badge-bg statistic-icon"
               ><img src="./assets/svg/Vector(6).svg" alt=""
             /></span>
-            <h1 class="section-title">
+            <h1 class="section-title animate">
               Work lazily and achieve the result you want.
             </h1>
-            <h2 class="section-subtitle">
+            <h2 class="section-subtitle animate">
               Liquam id diam maecenas ultricies mi eget mauris pharetra et.
               Feugiat pretium nibh ipsum consequat nisl vel pretium lectus.
               Fermentum iaculis eu non diam.
             </h2>
           </div>
 
-          <div id="statistic" class="statistic-list">
+          <div id="statistic" class="statistic-list list animate">
             <div class="statistic-data custom-center">
-              <h1 class="statistic-text">420%</h1>
+              <h1 id="counter1" class="statistic-text">0%</h1>
               <p class="statistic-text-sub">Data Efficiency</p>
             </div>
 
             <div class="statistic-data custom-center">
-              <h1 class="statistic-text">708+</h1>
+              <h1 id="counter2" class="statistic-text">0%</h1>
               <p class="statistic-text-sub">Conversion Rate</p>
             </div>
 
             <div class="statistic-data custom-center">
-              <h1 class="statistic-text">1.82M</h1>
+              <h1 id="counter3" class="statistic-text">0%</h1>
+
               <p class="statistic-text-sub">AI LLM Scale</p>
             </div>
           </div>
@@ -199,60 +203,29 @@
           style="max-width: 680px"
           class="section-header feature-header-gap custom-start"
         >
-          <span class="badge-bg badge-text button-round">Who is it for?</span>
-          <h1 style="text-align: start" class="section-title">
+          <span class="badge-bg badge-text button-round animate"
+            >Who is it for?</span
+          >
+          <h1 style="text-align: start" class="section-title animate">
             What the procrastinators say
           </h1>
-          <h2 style="text-align: start" class="section-subtitle">
+          <h2 style="text-align: start" class="section-subtitle animate">
             Mi ipsum faucibus vitae aliquet nec. At tempor commodo ullamcorper a
             lacus. Bibendum at varius vel pharetra vel.
           </h2>
         </div>
 
         <div class="who-is-it-for">
-          <div class="who-is-it-for-list">
-            <div class="who-is-it-for-card">
-              <span class="bar"></span>
-              <div class="who-is-it-for-content">
-                <h2 class="who-is-it-for-title">
-                  Convallis tellus id interdum velit
-                </h2>
-                <p class="who-is-it-for-detail">
-                  Est pellentesque elit ullamcorper dignissim cras. In
-                  pellentesque massa placerat duis ultricies.
-                </p>
-              </div>
-            </div>
-
-            <div class="who-is-it-for-card">
-              <span class="bar"></span>
-              <div class="who-is-it-for-content">
-                <h2 class="who-is-it-for-title">
-                  Id interdum velit laoreet id donec ultrices
-                </h2>
-                <p class="who-is-it-for-detail">
-                  Donec massa sapien faucibus et molestie ac feugiat sed. Congue
-                  mauris rhoncus aenean vel elit scelerisque.
-                </p>
-              </div>
-            </div>
-
-            <div class="who-is-it-for-card">
-              <span class="bar"></span>
-              <div class="who-is-it-for-content">
-                <h2 class="who-is-it-for-title">
-                  Sapien et ligula ullamcorper malesuada
-                </h2>
-                <p class="who-is-it-for-detail">
-                  Donec massa sapien faucibus et molestie ac feugiat sed. Congue
-                  mauris rhoncus aenean vel elit scelerisque.
-                </p>
-              </div>
-            </div>
+          <div id="who-is-it-for-list" class="who-is-it-for-list animate">
+            <!-- cards -->
           </div>
 
-          <div class="who-is-it-for-photo">
-            <img src="./assets/images/Frame.png" alt="" />
+          <div class="who-is-it-for-photo animate">
+            <img
+              id="selected-thumbnail"
+              src="./assets/images/Frame.png"
+              alt=""
+            />
           </div>
         </div>
       </div>
@@ -264,15 +237,20 @@
       <div class="container">
         <div class="testimonial-section custom-center">
           <div class="section-header custom-gap-24-20 custom-center">
-            <span class="badge-bg badge-text button-round">Testimonials</span>
-            <h1 class="section-title">What People Say</h1>
-            <h2 style="text-align: center" class="section-subtitl-lg-md">
+            <span class="badge-bg badge-text button-round animate"
+              >Testimonials</span
+            >
+            <h1 class="section-title animate">What People Say</h1>
+            <h2
+              style="text-align: center"
+              class="section-subtitl-lg-md animate"
+            >
               You can visit our office anytime but please don’t stalk us or
               don’t be creepy.
             </h2>
           </div>
 
-          <div id="testimonial-list"></div>
+          <div id="testimonial-list" class="list animate"></div>
           <button
             id="more-testimonial-btn"
             style="padding: 10px 16px"
@@ -289,17 +267,19 @@
     <section class="container">
       <div class="contact-section custom-start">
         <div class="section-header custom-gap-24-24 custom-start">
-          <span class="badge-text badge-bg button-round">Visit Us Anytime</span>
-          <h1 style="text-align: start" class="head-md-extrabold">
+          <span class="badge-text badge-bg button-round animate"
+            >Visit Us Anytime</span
+          >
+          <h1 style="text-align: start" class="head-md-extrabold animate">
             Our Office
           </h1>
-          <h2 style="text-align: start" class="paragraph-lg">
+          <h2 style="text-align: start" class="paragraph-lg address animate">
             You can visit our office anytime but please don’t stalk us or don’t
             be creepy.
           </h2>
         </div>
 
-        <div id="contact-list"></div>
+        <div id="contact-list" class="list animate"></div>
       </div>
     </section>
     <!-- contact secttion end -->
@@ -309,9 +289,12 @@
       <div class="container">
         <div class="faq-section custom-center">
           <div class="section-header custom-gap-24-20 custom-center">
-            <span class="badge-bg badge-text button-round">FAQ</span>
-            <h1 class="section-title">Frequently Asked Questions</h1>
-            <h2 style="text-align: center" class="section-subtitl-lg-md">
+            <span class="badge-bg badge-text button-round animate">FAQ</span>
+            <h1 class="section-title animate">Frequently Asked Questions</h1>
+            <h2
+              style="text-align: center"
+              class="section-subtitl-lg-md animate"
+            >
               Fermentum iaculis eu non diam phasellus vestibulum. Volutpat
               commodo sed egestas egestas fringilla phasellus. Donec ac odio
               tempor orci dapibus ultrices.
@@ -329,17 +312,17 @@
       <div class="cta-section custom-center">
         <div class="cta-btn-container">
           <div class="section-header custom-gap-24-24 custom-start">
-            <h1 style="text-align: start" class="section-title">
+            <h1 style="text-align: start" class="section-title animate">
               Let’s Download The App.
             </h1>
-            <h2 style="text-align: start" class="section-subtitl-lg-md">
+            <h2 style="text-align: start" class="section-subtitl-lg-md animate">
               Velit scelerisque in dictum non consectetur. Felis eget velit
               aliquet sagittis. Ultricies integer quis auctor elit sed vulputate
               mi. Massa id neque aliquam vestibulum morbi blandit cursus.
             </h2>
           </div>
 
-          <div class="cta-btn-section">
+          <div class="cta-btn-section animate">
             <button class="button-round learn-more-btn text-md-bold">
               Learn More
             </button>
@@ -352,7 +335,12 @@
           </div>
         </div>
         <div class="cta-photo">
-          <img src="./assets/images/Frame(3).png" alt="cta-photo" srcset="" />
+          <img
+            class="animate"
+            src="./assets/images/Frame(3).png"
+            alt="cta-photo"
+            srcset=""
+          />
         </div>
       </div>
     </section>
@@ -429,9 +417,12 @@
     </section>
     <!-- footer end -->
 
-    <script
+    <!-- <script
       type="module"
       src="https://fatema-a-ferdaus-ananna.github.io/blinto-skill-test-task/script/script.js"
-    ></script>
+    ></script> -->
+
+    <script type="module" src="/script/script.js"></script>
+    <script src="/script/animation.js"></script>
   </body>
 </html>

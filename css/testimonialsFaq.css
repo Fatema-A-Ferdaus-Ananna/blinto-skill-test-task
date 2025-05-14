@@ -61,6 +61,24 @@
 /* testimonial end */
 
 /* contact start */
+@keyframes animate-left-to-right {
+  from {
+    opacity: 0;
+    transform: translateX(-50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.address {
+  display: block;
+}
+.address.in-view {
+  animation: animate-left-to-right 1s ease-out;
+}
+
 .contact-section {
   padding: 96px 0px;
   display: flex;
@@ -73,6 +91,7 @@
   grid-template-columns: repeat(4, 1fr);
   gap: 32px;
 }
+
 .contact-info-item {
   padding: 24px;
   width: 100%;
@@ -167,9 +186,39 @@
   flex-direction: column;
   gap: 48px;
 }
+
+@keyframes animation-title {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
 .cta-btn-section {
-  display: flex;
+  opacity: 0;
+  display: block;
   gap: 16px;
+}
+.cta-btn-section.in-view {
+  animation: animation-title 1s ease-out 0.8s forwards;
+}
+
+@keyframes animation-img {
+  from {
+    width: 80%;
+    height: 80%;
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    width: 100%;
+    height: 100%;
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 .cta-photo {
   max-height: 650px;
@@ -180,11 +229,14 @@
   justify-content: center;
   align-items: center;
 }
+
 .cta-photo img {
-  width: 100%;
-  height: 100%;
   object-fit: cover;
 }
+.cta-photo img.in-view {
+  animation: animation-img 1s ease-out forwards;
+}
+
 .learn-more-btn {
   color: var(--primary-color);
   border: 1px solid var(--primary-color);

@@ -12,16 +12,39 @@
   text-align: center;
   color: var(--primary-color);
   white-space: nowrap;
+  display: block;
+  opacity: 0;
+}
+.badge-text.in-view {
+  animation: animation-title 1s ease-out forwards;
 }
 
+@keyframes animation-hero-main-text {
+  from {
+    opacity: 0;
+    scale: 0.8;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    scale: 1;
+    transform: translateY(0);
+  }
+}
 .hero-main-text {
   font-weight: 800;
-  font-size: 60px;
   line-height: 68px;
+  font-size: 60px;
   letter-spacing: -0.018em;
   text-align: center;
   color: var(--gray-80);
+  display: block;
+  transition: all 0.6s ease;
 }
+.hero-main-text.in-view {
+  animation: animation-hero-main-text 1s ease-out forwards;
+}
+
 .hero-sub-text {
   font-weight: 400;
   font-size: 18px;
@@ -29,12 +52,28 @@
   letter-spacing: 0;
   text-align: center;
   color: var(--gray-60);
+  opacity: 0;
 }
+.hero-sub-text.in-view {
+  animation: animation-title 1s ease-out 1s forwards;
+}
+
 .hero-cta-btn-text {
   font-weight: 700;
   font-size: 20px;
   line-height: 22px;
   letter-spacing: -0.007em;
+}
+
+@keyframes animation-title {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 .section-title {
   font-weight: 800;
@@ -43,6 +82,11 @@
   letter-spacing: -1.4%;
   text-align: center;
   color: var(--gray-80);
+  display: block;
+  transition: opacity 0.3s ease-out;
+}
+.section-title.in-view {
+  animation: animation-title 1s ease-out forwards;
 }
 .section-subtitle {
   font-weight: 400;
@@ -51,7 +95,12 @@
   letter-spacing: 0;
   text-align: center;
   color: var(--gray-60);
+  opacity: 0;
 }
+.section-subtitle.in-view {
+  animation: animation-title 1s ease-out 0.8s forwards;
+}
+
 .section-subtitl-lg-md {
   font-weight: 400;
   font-size: 18px;
@@ -59,6 +108,11 @@
   letter-spacing: 0%;
   color: var(--gray-60);
   text-align: center;
+  display: block;
+  opacity: 0;
+}
+.section-subtitl-lg-md.in-view {
+  animation: animation-title 1s ease-out 0.8s forwards;
 }
 
 .cta-text {
@@ -170,13 +224,29 @@
 }
 
 /* common */
+
+@keyframes animation-title-popup {
+  from {
+    opacity: 0;
+    transform: translateX(-50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
 .head-md-extrabold {
   font-weight: 800;
   font-size: 36px;
   line-height: 44px;
   letter-spacing: -1.4%;
   color: var(--gray-80);
+  opacity: 0;
 }
+.head-md-extrabold.in-view {
+  animation: animation-title-popup 1s ease-out forwards;
+}
+
 .paragraph-lg {
   font-weight: 400;
   font-size: 18px;
