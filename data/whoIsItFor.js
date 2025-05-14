@@ -3,7 +3,7 @@ export const whoIsItFor = [
     title: " Convallis tellus id interdum velit",
     description:
       " Est pellentesque elit ullamcorper dignissim cras. Inpellentesque massa placerat duis ultricies.",
-    thumnail: "/assets/images/Frame.png",
+    thumnail: "assets/images/Frame.png",
   },
   {
     title: " Id interdum velit laoreet id donec ultrices",
